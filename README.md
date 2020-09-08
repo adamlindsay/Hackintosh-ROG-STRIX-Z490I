@@ -2,9 +2,9 @@
 
 This repository is about hackintosh on **Asus ROG STRIX Z490I**. For now, all the hardware is working as expected, it's ready for daily usage and I will continue to follow the updates of OpenCore and macOS.
 
-Anyone who has the same board can use my EFI directly. The source EFI folder uses debug version of OpenCore, mainly used for installation and testing. It’s recommended to use the release version for daily usage, you can replace it yourself or just download my release. Either way, don’t forget to edit the `EFI/OC/config.plist` file, you should generate your own SMBIOS info by following the [Comet Lake Config Guide](https://dortania.github.io/OpenCore-Desktop-Guide/config.plist/comet-lake.html#platforminfo). 
+Anyone who has the same board can use my EFI directly. The source EFI folder uses debug version of OpenCore, mainly used for installation and testing. It’s recommended to use the release version for daily usage, you can replace it yourself or just download my release. Either way, don’t forget to edit the `EFI/OC/config.plist` file, you should generate your own SMBIOS info by following the [Comet Lake Config Guide](https://dortania.github.io/OpenCore-Install-Guide/config.plist/comet-lake.html#platforminfo). 
 
-Highly recommended reading the whole [OpenCore Desktop Guide](https://dortania.github.io/OpenCore-Desktop-Guide/) before you start.
+Highly recommended reading the whole [OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/) before you start.
 
 ## Hardware
 
@@ -18,7 +18,7 @@ Highly recommended reading the whole [OpenCore Desktop Guide](https://dortania.g
 
 ## Software
 
-* Bootloader: OpenCore 0.5.9-DEBUG
+* Bootloader: OpenCore 0.6.0-DEBUG
 * OS: macOS Catalina 10.15.5 (19F96 / 2020-05-26)
 
 ## What's working
@@ -163,8 +163,6 @@ Works with DP output and power button. GPRW Patch is used to disabling the USB d
 2. When using HDMI, the display cannot be woken up.
 3. Without enabling GPRW, a keyboard press or mouse click can wake up the display as well, but a second press or click is needed when the light is on, I tried to fix it by following [Keyboard Wake Issues Guide](https://dortania.github.io/USB-Map-Guide/misc/keyboard.html), but didn't work. So my choice is to just use the power button, disable `SSDT-GPRW` if you want to use a keyboard or mouse to wake up.
 
-> dGPU has not been tested.
-
 ### F1 Boot Error
 
 Add patch to `Kernel -> Patch`:
@@ -238,14 +236,14 @@ Compiled by following the [Dortania's ACPI Guide](https://dortania.github.io/Get
 
 All kexts with a version tag are downloaded from original repositories.
 
-* VirtualSMC.kext `1.1.4`
-* SMCProcessor.kext `1.1.4`
-* SMCSuperIO.kext `1.1.4`
-* Lilu.kext `1.4.5`
-* WhateverGreen.kext `1.4.0`
-* AppleALC.kext `1.5.0`
+* VirtualSMC.kext `1.1.5`
+* SMCProcessor.kext `1.1.5`
+* SMCSuperIO.kext `1.1.5`
+* Lilu.kext `1.4.6`
+* WhateverGreen.kext `1.4.1`
+* AppleALC.kext `1.5.1`
 * IntelMausi.kext `1.0.3`
-* NVMeFix.kext `1.0.2`
+* NVMeFix.kext `1.0.3`
 * RadeonBoost.kext `v1.6`
 * FakePCIID.kext (from RehabMan `2018-1027`)
 * FakePCIID_Intel_HDMI_Audio.kext (from RehabMan `2018-1027`)
@@ -257,7 +255,7 @@ All kexts with a version tag are downloaded from original repositories.
 
 ### Installation
 
-The installation guide in the [OpenCore Desktop Guide](https://dortania.github.io/OpenCore-Desktop-Guide/) are quite clear and easy, so there will be no detailed installation tutorials here. Give it some patience and you can build your own EFI.
+The installation guide in the [OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/) are quite clear and easy, so there will be no detailed installation tutorials here. Give it some patience and you can build your own EFI.
 
 ### Tools
 
@@ -287,6 +285,6 @@ The installation guide in the [OpenCore Desktop Guide](https://dortania.github.i
 ## Credits
 
 * Acidanthera for [OpenCorePkg](https://github.com/acidanthera/OpenCorePkg)
-* Dortania for [OpenCore Desktop Guide](https://dortania.github.io/OpenCore-Desktop-Guide/)
+* Dortania for [OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/)
 * SchmockLord for [Hackintosh-Intel-i9-10900k-Gigabyte-Z490-Vision-D](https://github.com/SchmockLord/Hackintosh-Intel-i9-10900k-Gigabyte-Z490-Vision-D)
 * All contributors to the hackintosh system
